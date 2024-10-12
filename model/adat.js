@@ -1,44 +1,65 @@
-const autokLista=[
+export const autokLista=[
     {
         id:1,
         nev:"Maserati Ghibli",
-        kep:"kepek/maseratighibli",
+        kep:"kepek/maseratighibli.jpg",
         db:10,
         ertek:35000000,        
     },
     {
         id:2,
         nev:"Nissan GT-R",
-        kep:"kepek/nissangtr",
+        kep:"kepek/nissangtr.jpg",
         db:15,
         ertek:42000000,        
     },
     {
         id:3,
         nev:"Honda Civic Type-R",
-        kep:"kepek/hondacivictyper",
+        kep:"kepek/hondacivictyper.jpg",
         db:22,
         ertek:28000000,        
     },
     {
         id:4,
         nev:"Ferrari Pista",
-        kep:"kepek/ferraripista",
+        kep:"kepek/ferraripista.jpg",
         db:14,
         ertek:48000000,        
     },
     {
         id:5,
         nev:"Audi RS6",
-        kep:"kepek/audirss6",
+        kep:"kepek/audirs6.jpg",
         db:30,
         ertek:38000000,        
     },
     {
         id:6,
         nev:"Corvette C7",
-        kep:"corvettec7",
+        kep:"kepek/corvettec7.jpg",
         db:6,
         ertek:59000000,        
+    },
+    {
+        id:7,
+        nev:"Ford Mustang",
+        kep:"kepek/fordmustang.jpg",
+        db:28,
+        ertek:18000000,        
+    },
+    {
+        id:8,
+        nev:"Mercedes AMG A-class",
+        kep:"kepek/mercedesamga.jpg",
+        db:6,
+        ertek:22000000,
+    },
+    {
+        id:9,
+        nev:"BMW i5",
+        kep:"kepek/bmwi5.jpg",
+        db:18,
+        ertek:19000000,
     }
 ]

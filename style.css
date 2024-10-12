@@ -1,0 +1,77 @@
+body {
+    background-color: #ccc;
+    padding: 20px;
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.termekek {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.divek {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #455649;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dae2dc;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .divek {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .divek {
+        width: 100%;
+    }
+}
+
+.kosar {
+    border: #455649;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.kosarElem {
+    border: 1px solid #000000;
+    padding: 10px;
+    background-color: #ecf0ed;
+}
+
+@media (max-width: 768px) {
+    .kosarElem {
+        width: 50%
+    }
+}
+
+@media (max-width: 480px) {
+    .kosarElem {
+        width: 100%;
+    }
+}

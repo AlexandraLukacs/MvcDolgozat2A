@@ -6,7 +6,6 @@ export default class Termek{
     constructor(obj, szuloElem){
         this.#obj=obj;
         this.#szuloElem=szuloElem;
-        this.termekElem=$(".termekek")
         this.termekKiir();
         this.esemenykezelo();
     }
@@ -15,19 +14,26 @@ export default class Termek{
         this.#szuloElem.append(`
             <div class="divek">
                 <h2>${this.#obj.nev}</h2>
-                <img src="${this.#obj.kep}" alt="${this.#obj.kep}">
+                <img class="w-100 rounded" src="${this.#obj.kep}" alt="${this.#obj.kep}">
                 <p>Ár ${this.#obj.ertek} Ft</p>
                 <p>Darabszám: ${this.#obj.db}</p>
-                <button>Darabszám csökkentése</button>
-                <button>Kosárba</button>
+                <button class="csokkent">Darabszám csökkentése</button>
+                <button class="kosarba">Kosárba</button>
             </div>
             `)
     }
 
     esemenykezelo(){
-        this.termekElem.on("clcik", ()=>{
-            const e = new CustomEvent("termekek", {detail: this.#obj})
-            window.dispatchEvent(e)
-        })
+    
+        this.#szuloElem.find(".kosarba:last").on("click", () => {
+            const esemeny = new CustomEvent("kosarba", { detail: this.#obj });
+            window.dispatchEvent(esemeny);
+        });
+
+        this.#szuloElem.find(".csokkent:last").on("click", () => {
+            const esemeny = new CustomEvent("csokkent", { detail: { id: this.#obj.id } });
+            window.dispatchEvent(esemeny);
+        });
+
     }
 }

@@ -8,6 +8,7 @@ export default class Termekek{
     constructor(lista, taroloElem){
         this.#lista=lista;
         this.#taroloElem=taroloElem;
+        this.termekekKiir();
     }
 
     termekekKiir(){

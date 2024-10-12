@@ -6,11 +6,14 @@ export default class Model{
         this.#lista=lista;
     }
 
-    getLissta(){
+    getLista(){
         return this.#lista;
     }
 
-    setLista(id, ertek){
-        this.#lista=[id, ertek];
+    setLista(id, ujDb){
+        const termek = this.#lista.find(termek => termek.id === id);
+        if (termek) {
+            termek.db = ujDb;
+        }
     }
 }
